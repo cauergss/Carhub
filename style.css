@@ -1,0 +1,62 @@
+/* ===== CAROUSEL HERO ===== */
+#carousel {
+    position: relative;
+}
+
+/* garante altura fixa do hero */
+#carousel,
+#carousel .carousel-inner,
+#carousel .carousel-item {
+    height: 80vh;
+}
+
+/* faz a imagem se comportar como background */
+.carousel-imagem {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* overlay escuro igual hero-section */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* texto sempre acima da imagem + overlay */
+.carousel-caption {
+    z-index: 2;
+}
+
+/* centralização vertical perfeita do texto */
+.carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+/* logo */
+#logo {
+    width: 326px;
+    height: auto;
+}
+
+/* cards */
+.card {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+    #carousel,
+    #carousel .carousel-inner,
+    #carousel .carousel-item {
+        height: 60vh;
+    }
+
+    #logo {
+        width: 220px;
+    }
+}
